@@ -35,5 +35,12 @@
         </Button>
         <ListView Name="listViewPatients" Margin="384,43,0,0" Width="307" Height="314" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Button Name="btnDeletePatient" Content="Delete patient" HorizontalAlignment="Left" Margin="384,372,0,0" VerticalAlignment="Top" Width="150" Height="20" Click="btnDeletePatient_Click"/>
+        <ComboBox Name="comboboxDiseases" HorizontalAlignment="Left" Margin="83,0,0,0" VerticalAlignment="Center" Width="145" RenderTransformOrigin="1.086,1.77">
+            <ComboBoxItem Content="Broken leg"/>
+            <ComboBoxItem Content="Bloody nose"/>
+            <ComboBoxItem Content="Heart attack"/>
+            <ComboBoxItem Content="Too much HTL"/>
+        </ComboBox>
+        <Button Name="btnAddDisease"  Content="Add Disease" HorizontalAlignment="Left" Margin="294,0,0,0" VerticalAlignment="Center" Width="70" Click="btnAddDisease_Click"/>
     </Grid>
 </Window>

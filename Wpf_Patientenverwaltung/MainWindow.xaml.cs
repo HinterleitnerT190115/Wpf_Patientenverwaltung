@@ -63,7 +63,7 @@ namespace Wpf_Patientenverwaltung
             {
                 foreach (var entry in patientList)
                 {
-                    sw.WriteLine(entry);
+                    sw.WriteLine(entry.ToString(asCSV: true));
                 }
             }
         }
