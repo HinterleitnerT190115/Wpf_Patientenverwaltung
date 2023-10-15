@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Patientenverwaltung"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="934"
         Loaded="Window_Loaded">
     <Grid>
-        <Menu Width="800" Height="27" VerticalAlignment="Top">
+        <Menu Height="27" VerticalAlignment="Top">
             <MenuItem Name="miFile" Header="File" Height="27" Width="37">
                 <MenuItem Name="miOpen" Header="Open" Click="miOpen_Click"></MenuItem>
                 <MenuItem Name="miSave" Header="Save" Click="miSave_Click"></MenuItem>
@@ -29,12 +29,12 @@
                 <RadioButton Name="radioButtonFemale" GroupName="radioGroupGender" Content="Female" Margin="0,21,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
-        <CheckBox Name="checkBoxBedWetter" Content="Bed wetter" Margin="83,199,0,0" Height="16" Width="130" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <CheckBox Name="checkBoxBedWetter" Content="Bed wetter" Margin="83,239,0,0" Height="16" Width="130" HorizontalAlignment="Left" VerticalAlignment="Top" />
         <Button Name="btnAddPatient" HorizontalAlignment="Left" Margin="234,96,0,0" VerticalAlignment="Top" Height="98" Width="130" Click="btnAddPatient_Click">
             <Image Source="/Arrow.png" Stretch="Fill"/>
         </Button>
-        <ListView Name="listViewPatients" Margin="384,43,0,0" Width="307" Height="314" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Button Name="btnDeletePatient" Content="Delete patient" HorizontalAlignment="Left" Margin="384,372,0,0" VerticalAlignment="Top" Width="150" Height="20" Click="btnDeletePatient_Click"/>
+        <ListView Name="listViewPatients" Margin="384,43,0,0" Width="307" Height="314" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="listViewPatients_SelectionChanged"/>
+        <Button Name="btnDeleteSelectedPatient" Content="Delete selected patient" HorizontalAlignment="Left" Margin="384,372,0,0" VerticalAlignment="Top" Width="150" Height="20" Click="btnDeleteSelectedPatient_Click"/>
         <ComboBox Name="comboboxDiseases" HorizontalAlignment="Left" Margin="83,0,0,0" VerticalAlignment="Center" Width="145" RenderTransformOrigin="1.086,1.77">
             <ComboBoxItem Content="Broken leg"/>
             <ComboBoxItem Content="Bloody nose"/>
@@ -42,5 +42,10 @@
             <ComboBoxItem Content="Too much HTL"/>
         </ComboBox>
         <Button Name="btnAddDisease"  Content="Add Disease" HorizontalAlignment="Left" Margin="294,0,0,0" VerticalAlignment="Center" Width="70" Click="btnAddDisease_Click"/>
+        <GroupBox Header="List of Patients" Margin="717,43,29,77">
+            <StackPanel Name="stackPanelPatients">
+            </StackPanel>
+        </GroupBox>
+        <Button Name="btnDeleteAllPatients" Content="Delete all" HorizontalAlignment="Left" Margin="559,372,0,0" VerticalAlignment="Top" Width="132" Height="20" Click="btnDeleteAllPatients_Click"/>
     </Grid>
 </Window>
